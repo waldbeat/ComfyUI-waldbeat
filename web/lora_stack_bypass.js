@@ -59,7 +59,7 @@ function sanitize(html) {
 function strengthHints(htmlText) {
   const txt = new DOMParser().parseFromString(htmlText || "", "text/html").body.textContent || "";
   return txt.split(/(?<=[.!?\n])\s+/)
-    .filter((s) => s.length < 300 && (/(strength|weight|stärke|gewicht|scale)s?\s*(of|:|=|at|von|auf|bei|around|between)?\s*[~≈-]?\s*\d/i.test(s) || /(best results|recommend|empfohlen|suggest|use (it )?at|works best|optimal)[^.]*(strength|weight|stärke|gewicht)/i.test(s) || /<lora:[^>]*:\s*-?\d/i.test(s)))
+    .filter((s) => s.length < 300 && !/\b(cfg|sampling steps|steps of|sampler|scheduler)\b/i.test(s) && (/(strength|weight|stärke|gewicht|scale)s?\s*(of|:|=|at|von|auf|bei|around|between)?\s*[~≈-]?\s*\d/i.test(s) || /(best results|recommend|empfohlen|suggest|use (it )?at|works best|optimal)[^.]*(strength|weight|stärke|gewicht)/i.test(s) || /<lora:[^>]*:\s*-?\d/i.test(s)))
     .slice(0, 5);
 }
 
