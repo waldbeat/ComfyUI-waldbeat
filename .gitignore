@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+# private / local only
+chat_memory.json
+chat_nodes.py
+talk_system_prompt.txt
+*.lsb-info.json
