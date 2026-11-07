@@ -1,12 +1,13 @@
 [project]
 name = "waldbeat"
-description = "LoRA stack in bypass mode (no re-patching on change) with a Civitai/LoRA-Manager info dialog per row. Works with Nodes 2.0."
-version = "0.1.0"
-license = { text = "MIT" }
+description = "Mega LoRA Loader (MLX + Torch): LoRA stack in bypass mode with search and a Civitai / LoRA Manager info dialog per row. Works with Nodes 2.0."
+version = "1.0.0"
+license = { file = "LICENSE" }
+dependencies = []
 
 [project.urls]
 Repository = "https://github.com/waldbeat/ComfyUI-waldbeat"
 
 [tool.comfy]
 PublisherId = "waldbeat"
-DisplayName = "waldbeat"
+DisplayName = "waldbeat – Mega LoRA Loader"
