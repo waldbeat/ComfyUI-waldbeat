@@ -38,6 +38,7 @@ For Krea 2 running natively on Apple's **MLX** framework (no PyTorch involved in
 - Output type is `KREA2_LORASTACK` (list of path + strength), compatible with the `Krea2 LoRA (MLX)` node – the optional `lora_stack` input lets you chain it with other LoRA nodes.
 - MLX applies LoRAs unfused, so each active LoRA adds a few seconds per image – depending on the LoRA's size. For LoRAs you always use, baking them into the model is faster.
 - Negative strengths (slider LoRAs) are supported.
+- Kohya-format Krea 2 LoRAs (`lora_unet_blocks_0_attn_wq` …) are converted automatically for MLX (once, cached in `models/mlx_lora_cache`; the original file stays untouched).
 
 ## Mega LoRA Loader (Torch) – Windows / Linux / macOS
 

@@ -1,7 +1,7 @@
 [project]
 name = "waldbeat"
 description = "Mega LoRA Loader (MLX + Torch): LoRA stack in bypass mode with search and a Civitai / LoRA Manager info dialog per row. Works with Nodes 2.0."
-version = "1.0.0"
+version = "1.0.1"
 license = { file = "LICENSE" }
 dependencies = []
 
